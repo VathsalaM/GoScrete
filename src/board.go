@@ -5,6 +5,18 @@ type board struct {
 	table map[int]map[int]tile
 }
 
+type Position struct{
+	column int
+	row int
+}
+
+type Element interface {
+	currentPosition()(Position)
+	NextPosition()(Position)
+	Die()(bool)
+	Kill()(bool)
+}
+
 func createTable(size int, length int) (map[int]map[int]tile) {
 	colours := []string{ "white","black"}
 	columns := make(map[int](map[int]tile),0)

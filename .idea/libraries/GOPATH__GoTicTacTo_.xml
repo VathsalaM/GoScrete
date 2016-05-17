@@ -2,6 +2,7 @@
   <library name="GOPATH &lt;GoTicTacTo&gt;">
     <CLASSES>
       <root url="file://$USER_HOME$/periscope-cloud/src/git.periscope-solutions.com" />
+      <root url="file://$USER_HOME$/periscope-cloud/src/github.com" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
