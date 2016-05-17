@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;GoTicTacTo&gt;">
+    <CLASSES>
+      <root url="file://$USER_HOME$/periscope-cloud/src/git.periscope-solutions.com" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>
