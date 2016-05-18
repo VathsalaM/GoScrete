@@ -1,6 +1,6 @@
 package components
 
-import "github.com/VathsalaM/GoScrete/Interface"
+import "github.com/VathsalaM/GoSecret/Interface"
 
 type camel struct{
 	position Interface.Position
