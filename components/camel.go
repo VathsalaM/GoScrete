@@ -1,7 +1,9 @@
 package components
 
+import "github.com/VathsalaM/GoScrete/Interface"
+
 type camel struct{
-	position int
+	position Interface.Position
 	id int
 	colour string
 }
@@ -9,7 +11,7 @@ type camel struct{
 func NewCamel(id int,colour string)(newCamel camel){
 	newCamel.colour = colour
 	newCamel.id = id
-	newCamel.position= nil
+	newCamel.position= Interface.Position{}
 	return
 }
 

@@ -1,7 +1,9 @@
 package components
 
+import "github.com/VathsalaM/GoScrete/Interface"
+
 type elephant struct{
-	position int
+	position Interface.Position
 	id int
 	colour string
 }
@@ -9,7 +11,7 @@ type elephant struct{
 func NewElephant(id int,colour string)(newElephant elephant){
 	newElephant.colour = colour
 	newElephant.id = id
-	newElephant.position= nil
+	newElephant.position= Interface.Position{}
 	return
 }
 

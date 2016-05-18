@@ -1,7 +1,9 @@
 package components
 
+import "github.com/VathsalaM/GoScrete/Interface"
+
 type king struct{
-	position int
+	position Interface.Position
 	id int
 	colour string
 }
@@ -9,7 +11,7 @@ type king struct{
 func NewKing(id int,colour string)(newKing king){
 	newKing.colour = colour
 	newKing.id = id
-	newKing.position= nil
+	newKing.position= Interface.Position{}
 	return
 }
 

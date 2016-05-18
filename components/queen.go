@@ -1,7 +1,9 @@
 package components
 
-	type queen struct{
-	position int
+import "github.com/VathsalaM/GoScrete/Interface"
+
+type queen struct{
+	position Interface.Position
 	id int
 	colour string
 }
@@ -9,7 +11,7 @@ package components
 func NewQueen(id int,colour string)(newQueen queen){
 	newQueen.colour = colour
 	newQueen.id = id
-	newQueen.position= nil
+	newQueen.position= Interface.Position{}
 	return
 }
 
