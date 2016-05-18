@@ -11,3 +11,7 @@ func NewTile(id int,color string)(newTile tile){
 	newTile.id = id
 	return
 }
+
+func (t *tile)Place(element Element){
+
+}

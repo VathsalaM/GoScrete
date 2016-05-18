@@ -1,5 +1,7 @@
 package components
 
+import "github.com/VathsalaM/GoScrete/components"
+
 type soldier struct{
 	position int
 	id int
@@ -13,4 +15,7 @@ func NewSoldier(id int,colour string)(newSoldier soldier){
 	return
 }
 
+func (s *soldier)UpdatePosition(element Element){
+
+}
 
