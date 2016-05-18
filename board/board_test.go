@@ -12,9 +12,9 @@ func TestBoardCreation(t *testing.T) {
 
 func TestArrangedTiles(t *testing.T) {
 	board := New(1)
-	assert.Equal(t,"white",board.table[0][0].color)
-	assert.Equal(t,"black",board.table[0][1].color)
-	assert.Equal(t,"white",board.table[7][6].color)
-	assert.Equal(t,"black",board.table[7][7].color)
-	assert.Equal(t,63,board.table[7][7].id)
+	assert.Equal(t,"white",board.table[0][0].Color)
+	assert.Equal(t,"black",board.table[0][1].Color)
+	assert.Equal(t,"white",board.table[7][6].Color)
+	assert.Equal(t,"black",board.table[7][7].Color)
+	assert.Equal(t,63,board.table[7][7].Id)
 }

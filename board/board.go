@@ -1,31 +1,29 @@
 package src
 
-import t "github.com/VathsalaM/GoSecret/Tile"
+import(
+	t "github.com/VathsalaM/GoSecret/tile"
+	"github.com/VathsalaM/GoSecret/Interface"
+)
 
 type board struct {
 	id    int
 	table map[int]map[int]t.Tile
 }
 
-type Position struct{
-	column int
-	row int
-}
-
 type Element interface {
-	currentPosition()(Position)
-	NextPosition()(Position)
+	currentPosition()(Interface.Position)
+	NextPosition()(Interface.Position)
 	Die()(bool)
 	Kill()(bool)
 }
 
-func createTable(length int,width int ) (map[int]map[int]tile) {
+func createTable(length int,width int ) (map[int]map[int]t.Tile) {
 	colours := []string{ "white","black"}
-	columns := make(map[int](map[int]tile),0)
+	columns := make(map[int](map[int]t.Tile),0)
 	for j := 0; j < length; j++ {
-		var row = make(map[int]tile,0)
+		var row = make(map[int]t.Tile,0)
 		for i :=0; i < width; i++ {
-			row[i] = NewTile((j*width)+i, colours[i % 2])
+			row[i] = t.Tile{Id:Interface.Position{},Colour:colours[i%2]}
 		}
 		columns[j] = row
 	}
