@@ -19,7 +19,7 @@ func NewSoldier(id int,colour string)(newSoldier soldier){
 
 //}
 
-func (s *soldier)Position(){
-
+func (s *soldier)Position()Interface.Position{
+	return s.position
 }
 

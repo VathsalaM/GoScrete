@@ -23,7 +23,7 @@ func createTable(length int,width int ) (map[int]map[int]t.Tile) {
 	for j := 0; j < length; j++ {
 		var row = make(map[int]t.Tile,0)
 		for i :=0; i < width; i++ {
-			row[i] = t.Tile{Id:Interface.Position{},Colour:colours[i%2]}
+			row[i] = t.Tile{Id:Interface.Position{},Color:colours[i%2]}
 		}
 		columns[j] = row
 	}
