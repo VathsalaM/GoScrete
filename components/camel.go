@@ -1,7 +1,5 @@
 package components
 
-
-
 type camel struct{
 	position int
 	id int
