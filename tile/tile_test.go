@@ -3,8 +3,8 @@ package src
 import (
 	"testing"
 	"github.com/stretchr/testify/assert"
-	"github.com/VathsalaM/GoScrete/components"
-	"github.com/VathsalaM/GoScrete/Interface"
+	"github.com/VathsalaM/GoSecret/components"
+	"github.com/VathsalaM/GoSecret/Interface"
 )
 
 func TestForTileColour(t *testing.T) {
