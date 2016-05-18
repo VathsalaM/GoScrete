@@ -15,4 +15,10 @@ func NewElephant(id int,colour string)(newElephant elephant){
 	return
 }
 
+func (e *elephant)UpdatePosition(position Interface.Position){
+	e.position = position
+}
 
+func (e *elephant)Position()Interface.Position{
+	return e.position
+}

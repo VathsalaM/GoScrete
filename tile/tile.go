@@ -2,7 +2,6 @@ package src
 
 import (
 	"github.com/VathsalaM/GoSecret/Interface"
-	"fmt"
 )
 
 type Tile struct{
@@ -17,6 +16,5 @@ func (t *Tile)Place(element Interface.Element){
 		prevElement.UpdatePosition(Interface.Position{})
 	}
 	element.UpdatePosition(t.Id)
-	fmt.Println(element)
 	t.Element = element
 }

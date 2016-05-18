@@ -15,4 +15,6 @@ func TestCanPlace(t *testing.T) {
 	newTile.Place(&newSoldier)
 	assert.Equal(t,Interface.Position{1,1},newSoldier.Position())
 	newTile.Place(&newHorse)
+	assert.Equal(t,Interface.Position{},newSoldier.Position())
+	assert.Equal(t,Interface.Position{1,1},newHorse.Position())
 }

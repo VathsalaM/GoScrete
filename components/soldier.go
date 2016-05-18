@@ -2,7 +2,6 @@ package components
 
 import (
 	"github.com/VathsalaM/GoSecret/Interface"
-	"fmt"
 )
 
 type soldier struct{
@@ -19,9 +18,7 @@ func NewSoldier(id int,colour string)(newSoldier soldier){
 }
 
 func (s *soldier)UpdatePosition(position Interface.Position){
-	fmt.Println("Before : ",s.position)
 	s.position = position
-	fmt.Println("After : ",s.position)
 }
 
 func (s *soldier)Position()Interface.Position{

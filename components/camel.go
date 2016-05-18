@@ -15,4 +15,11 @@ func NewCamel(id int,colour string)(newCamel camel){
 	return
 }
 
+func (c *camel)UpdatePosition(position Interface.Position){
+	c.position = position
+}
+
+func (c *camel)Position()Interface.Position{
+	return c.position
+}
 

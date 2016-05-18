@@ -1,6 +1,8 @@
 package components
 
-import "github.com/VathsalaM/GoSecret/Interface"
+import (
+	"github.com/VathsalaM/GoSecret/Interface"
+)
 
 type queen struct{
 	position Interface.Position
@@ -14,5 +16,14 @@ func NewQueen(id int,colour string)(newQueen queen){
 	newQueen.position= Interface.Position{}
 	return
 }
+
+func (q *queen)UpdatePosition(position Interface.Position){
+	q.position = position
+}
+
+func (q *queen)Position()Interface.Position{
+	return q.position
+}
+
 
 
