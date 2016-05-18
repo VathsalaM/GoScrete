@@ -12,7 +12,7 @@ func TestCanPlace(t *testing.T) {
 	newHorse := components.NewHorse(3,"white")
 	newTile := Tile{Id:Interface.Position{1,1},Color:"Black"}
 	assert.Equal(t,Interface.Position{},newSoldier.Position())
-	newTile.Place(newSoldier)
-	assert.Equal(t,Interface.Position{},newSoldier.Position())
-	newTile.Place(newHorse)
+	newTile.Place(&newSoldier)
+	assert.Equal(t,Interface.Position{1,1},newSoldier.Position())
+	newTile.Place(&newHorse)
 }
