@@ -1,8 +1,10 @@
 package src
 
+import t "github.com/VathsalaM/GoSecret/Tile"
+
 type board struct {
 	id    int
-	table map[int]map[int]tile
+	table map[int]map[int]t.Tile
 }
 
 type Position struct{
