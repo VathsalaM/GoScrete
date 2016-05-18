@@ -1,9 +1,7 @@
 package components
 
-import "github.com/VathsalaM/GoScrete/Interface"
-
 type soldier struct{
-	position Interface.Position
+	//position Interface.Position
 	id int
 	colour string
 }
@@ -11,13 +9,13 @@ type soldier struct{
 func NewSoldier(id int,colour string)(newSoldier soldier){
 	newSoldier.colour = colour
 	newSoldier.id = id
-	newSoldier.position= Interface.Position{}
+	//newSoldier.position= Interface.Position{}
 	return
 }
 
-func (s *soldier)UpdatePosition(position Interface.Position){
+//func (s *soldier)UpdatePosition(position Interface.Position){
 
-}
+//}
 
 func (s *soldier)Position(){
 
