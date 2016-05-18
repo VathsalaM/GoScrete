@@ -15,9 +15,9 @@ func NewSoldier(id int,colour string)(newSoldier soldier){
 	return
 }
 
-//func (s *soldier)UpdatePosition(position Interface.Position){
+func (s *soldier)UpdatePosition(position Interface.Position){
 
-//}
+}
 
 func (s *soldier)Position()Interface.Position{
 	return s.position

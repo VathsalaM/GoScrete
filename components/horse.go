@@ -15,3 +15,8 @@ func NewHorse(id int,colour string)(newHorse horse){
 	return
 }
 
+func (h *horse)UpdatePosition(position Interface.Position){
+
+}
+
+
