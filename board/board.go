@@ -1,8 +1,8 @@
 package src
 
-import(
-	t "github.com/VathsalaM/GoSecret/tile"
+import (
 	"github.com/VathsalaM/GoSecret/Interface"
+	t "github.com/VathsalaM/GoSecret/tile"
 )
 
 type board struct {
@@ -10,20 +10,13 @@ type board struct {
 	table map[int]map[int]t.Tile
 }
 
-type Element interface {
-	currentPosition()(Interface.Position)
-	NextPosition()(Interface.Position)
-	Die()(bool)
-	Kill()(bool)
-}
-
-func createTable(length int,width int ) (map[int]map[int]t.Tile) {
-	colours := []string{ "white","black"}
-	columns := make(map[int](map[int]t.Tile),0)
+func createTable(length int, width int) map[int]map[int]t.Tile {
+	colours := []string{"white", "black"}
+	columns := make(map[int](map[int]t.Tile), 0)
 	for j := 0; j < length; j++ {
-		var row = make(map[int]t.Tile,0)
-		for i :=0; i < width; i++ {
-			row[i] = t.Tile{Id:Interface.Position{},Color:colours[i%2]}
+		var row = make(map[int]t.Tile, 0)
+		for i := 0; i < width; i++ {
+			row[i] = t.Tile{Id: Interface.Position{j, i}, Color: colours[i%2]}
 		}
 		columns[j] = row
 	}
@@ -32,6 +25,16 @@ func createTable(length int,width int ) (map[int]map[int]t.Tile) {
 
 func New(id int) (newboard board) {
 	newboard.id = id
-	newboard.table = createTable(8,8)
+	newboard.table = createTable(8, 8)
 	return
+}
+
+func (b *board) Place(element Interface.Element, position Interface.Position) {
+	tile := b.table[position.Row][position.Column]
+	tile.Place(element)
+}
+
+func (b *board) MoveElementForward(element Interface.Element){
+	currentPosition := element.Position()
+	b.Place(element,Interface.Position{currentPosition.Row,currentPosition.Column+1})
 }

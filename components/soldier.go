@@ -24,4 +24,3 @@ func (s *soldier)UpdatePosition(position Interface.Position){
 func (s *soldier)Position()Interface.Position{
 	return s.position
 }
-
